@@ -2,12 +2,16 @@
 
 import './App.css'
 import Todo from './components/Todo'
-
-function App() {
+  // const taskList = props.tasks?.map((task) => task.name);
+function App(props) {
+  const taskList = props.tasks?.map((task) => task.name);
   return(
     <>
+    
+    
      <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
+    
       <form>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
@@ -47,9 +51,10 @@ function App() {
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
-         <Todo name='Eat' completed id='todo-0'/>
+         {/* <Todo name='Eat' completed id='todo-0'/>
          <Todo name='Sleep' id="todo-1"/>
-         <Todo name='Repeat' id='todo-2'/>
+         <Todo name='Repeat' id='todo-2'/> */}
+         {taskList}
       </ul>
     </div>
   

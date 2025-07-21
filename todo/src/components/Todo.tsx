@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Todo = (props) => {
+  const [isEditing, setEditing] = useState(false)
   return (
     <div>
      <li className="todo stack-small">

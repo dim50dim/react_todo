@@ -7,12 +7,12 @@ import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 
 function App(props) {
-  function addTask(name) {
+  function addTask(name:string) {
     const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
   }
 
-  function toggleTaskCompleted(id) {
+  function toggleTaskCompleted(id: number) {
     const updatedTasks = tasks.map((task) => {
       // if this task has the same ID as the edited task
       if (id === task.id) {
@@ -25,7 +25,7 @@ function App(props) {
     setTasks(updatedTasks);
   }
 
-  function deleteTask(id) {
+  function deleteTask(id:number) {
     const remainingTasks = tasks.filter((task) => id !== task.id);
     setTasks(remainingTasks);
   }

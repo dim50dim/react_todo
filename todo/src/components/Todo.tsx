@@ -36,7 +36,7 @@ const viewTemplate = (
       </label>
     </div>
     <div className="btn-group">
-      <button type="button" className="btn">
+      <button type="button" className="btn" onClick={() => setEditing(true)}>
         Edit <span className="visually-hidden">{props.name}</span>
       </button>
       <button

@@ -11,7 +11,18 @@ function App(props) {
     const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
   }
-
+ function editTask(id:number, newName:string)  {
+  const editedTaskList = tasks.map((task) => {
+    // if this task has the same ID as the edited task
+    if (id === task.id) {
+      // Copy the task and update its name
+      return { ...task, name: newName };
+    }
+    // Return the original task if it's not the edited task
+    return task;
+  });
+  setTasks(editedTaskList);
+}
   function toggleTaskCompleted(id: number) {
     const updatedTasks = tasks.map((task) => {
       // if this task has the same ID as the edited task

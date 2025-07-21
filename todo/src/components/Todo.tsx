@@ -50,7 +50,8 @@ const viewTemplate = (
 );
   return (
     <div>
-     <li className="todo stack-small">
+      return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>
+     {/* <li className="todo stack-small">
       <div className="c-cb">
         <input onChange={() => props.toggleTaskCompleted(props.id)} id="todo-0" type="checkbox" defaultChecked={props.completed} />
         <label className="todo-label" htmlFor="todo-0">
@@ -65,10 +66,10 @@ const viewTemplate = (
           Delete <span className="visually-hidden">{props.name}</span>
         </button>
       </div>
-    </li>
+    </li> */}
     </div>
   )
 }
 
-export default Todo;
+export default Todo
  

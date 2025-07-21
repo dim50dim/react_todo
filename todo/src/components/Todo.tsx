@@ -5,7 +5,7 @@ const Todo = (props) => {
     <div>
      <li className="todo stack-small">
       <div className="c-cb">
-        <input id="todo-0" type="checkbox" defaultChecked={props.completed} />
+        <input onChange={() => props.toggleTaskCompleted(props.id)} id="todo-0" type="checkbox" defaultChecked={props.completed} />
         <label className="todo-label" htmlFor="todo-0">
           {props.name}
         </label>

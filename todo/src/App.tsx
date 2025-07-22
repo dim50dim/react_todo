@@ -6,6 +6,12 @@ import Todo from "./components/Todo";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 
+const FILTER_MAP = {
+  All: () => true,
+  Active: (task) => !task.completed,
+  Completed: (task) => task.completed,
+};
+
 function App(props) {
   function addTask(name:string) {
     const newTask = { id: `todo-${nanoid()}`, name, completed: false };

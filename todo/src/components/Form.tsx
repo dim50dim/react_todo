@@ -3,10 +3,13 @@ import React, { useState } from 'react'
 
 
 const Form = () => {
-    const [name,setName] = useState('');
+    const [newName,setNewName] = useState('');
     function handleChange(e): void {
   console.log(e.target.value);
 }
+   function handleChange(e)  {
+    setNewName(e.target.value)
+   }
   function handleSubmit(event) {
     event.preventDefault();
     props.addTask(name);

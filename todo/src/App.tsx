@@ -15,7 +15,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App(props) {
  const filterList  = FILTER_NAMES.map((name) => (
-        <FilterButton key={name} name={name} />
+        <FilterButton key={name} name={name} isPressed={name === filter} setFilter={setFilter} />
  ));
 
   function addTask(name:string) {

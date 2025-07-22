@@ -11,6 +11,7 @@ const FILTER_MAP = {
   Active: (task) => !task.completed,
   Completed: (task) => task.completed,
 };
+const FILTER_NAMES = Object.keys(FILTER_MAP);
 
 function App(props) {
   function addTask(name:string) {

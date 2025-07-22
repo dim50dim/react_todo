@@ -1,6 +1,7 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+ 
 const FilterButton = () => {
+  const [filter,setFilter] = useState('ALL')
   return (
     <div>
        <button type="button" className="btn toggle-btn" aria-pressed="true">
